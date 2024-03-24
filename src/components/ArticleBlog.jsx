@@ -56,7 +56,7 @@ const ArticleBlog = ({ Id, title, image, desc, data, profile,fullname, views, li
 //   } else {
 //       try {
 //           const response = await axios.post(
-//               `http://localhost:2400/PostgreSQL/API/posts/like/${ID}`, // Dynamically include postId in the URL
+//               `https://blogbeckend.onrender.com/PostgreSQL/API/posts/like/${ID}`, // Dynamically include postId in the URL
 //               {},
 //               {
 //                   headers: {
@@ -111,7 +111,7 @@ const handleLike = async (postId) => {
   } else {
     try {
       const response = await axios.post(
-        `http://localhost:2400/PostgreSQL/API/posts/like/${postId}`, // Dynamically include postId in the URL
+        `https://blogbeckend.onrender.com/PostgreSQL/API/posts/like/${postId}`, // Dynamically include postId in the URL
         {},
         {
           headers: {

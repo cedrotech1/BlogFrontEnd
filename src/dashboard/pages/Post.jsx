@@ -26,7 +26,7 @@ export default function Post() {
   const getData = async () => {
     const response = await axios.get(
       // "https://postgresql-2c0g.onrender.com/PostgreSQL/API/posts/get/all"
-          "http://localhost:2400/PostgreSQL/API/posts/get/all"
+          "https://blogbeckend.onrender.com/PostgreSQL/API/posts/get/all"
     );
     const data = response.data.data;
     setData(data);
@@ -43,7 +43,7 @@ export default function Post() {
     if (conf) {
       try {
         const response = await axios.delete(
-          `http://localhost:2400/PostgreSQL/API/posts/delete/${id}`,{
+          `https://blogbeckend.onrender.com/PostgreSQL/API/posts/delete/${id}`,{
             headers: {
               authorization: `Bearer ${token}`,
             },

@@ -56,7 +56,7 @@ function CreatePost({ closeModal }) {
 
     axios
       .post(
-        "http://localhost:2400/PostgreSQL/API/posts/add",
+        "https://blogbeckend.onrender.com/PostgreSQL/API/posts/add",
         formData,
         {
           headers: {

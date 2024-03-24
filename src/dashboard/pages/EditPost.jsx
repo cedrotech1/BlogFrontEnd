@@ -39,7 +39,7 @@ function EditPost() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:2400/PostgreSQL/API/posts/single/post/${id}`)
+      .get(`https://blogbeckend.onrender.com/PostgreSQL/API/posts/single/post/${id}`)
       .then((res) => setData(res.data.data))
       .catch((err) => console.log(err));
   }, []);
@@ -53,7 +53,7 @@ function EditPost() {
     const apiKey = localStorage.getItem("token");
     axios
       .put(
-        `http://localhost:2400/PostgreSQL/API/posts/update/${id}`,
+        `https://blogbeckend.onrender.com/PostgreSQL/API/posts/update/${id}`,
         formData,
         {
           headers: {

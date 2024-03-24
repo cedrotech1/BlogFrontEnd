@@ -102,7 +102,7 @@ export default function Signup() {
   const handleRegister = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:2400/PostgreSQL/API/users/signUp",
+        "https://blogbeckend.onrender.com/PostgreSQL/API/users/signUp",
         {
           firstName: firstName,
           lastName: lastName,
