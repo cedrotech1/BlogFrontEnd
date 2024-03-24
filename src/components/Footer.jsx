@@ -125,7 +125,7 @@ export default function Footer() {
                     </span>
                   </div>
                   <div>
-                    <p>+250 784366616</p>
+                    <p>+250 0785651518</p>
                   </div>
                 </div>
                 <div className="email flex-content">

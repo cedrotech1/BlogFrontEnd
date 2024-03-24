@@ -63,14 +63,7 @@ export default function Team() {
             </div>
           </div>
         </div>
-        <div className="testimony-section">
-          <div className="testimony-row">
-            <div className="testimony-title">
-              <span class="sub-heading">Testimonial</span>
-              <h2 class="">Happy Clients</h2>
-            </div>
-          </div>
-        </div>
+     
       </div>
     </>
   );
