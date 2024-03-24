@@ -16,9 +16,19 @@ export default function Hero() {
            specific you're looking for, feel free to reach out. Happy reading! 📖✨
           </p>
           <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-          <Link to="/contact">
-              <button className="btns login">Contact Us</button>
+          <div className="row"style={{marginTop:'-1cm'}}>
+            <div className="col-md-6">
+              
+            </div>
+               <Link to="/contact">
+              <button className="btns login" style={{marginTop:'0.2cm',width:'4cm'}}>Contact Us</button>
             </Link>
+
+            <Link to="/blogs" >
+              <button className="btns login" style={{marginTop:'0.2cm',width:'4cm'}}>Blogs</button>
+            </Link>
+          </div>
+       
         </div>
         <br />
         <div className="image">

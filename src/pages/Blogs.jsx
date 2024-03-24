@@ -2,6 +2,8 @@ import ArticleBlog from "../components/ArticleBlog";
 import Hero from "../components/Hero";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../components/style/contact.css";
+import HeroPage from "../components/HeroPage";
 import PropagateLoader from "react-spinners/PropagateLoader";
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -20,8 +22,9 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Hero />
-      {/* {ispending && (
+      {/* <Hero /> */}
+      <HeroPage title={"Blogs"} />
+      {ispending && (
         <div className="Loader container">
           <PropagateLoader
             color="#ffd369"
@@ -31,12 +34,12 @@ export default function Home() {
             speedMultiplier={1}
           />
         </div>
-      )} */}
-      {/* <div className="container">
+      )}
+      <div className="container">
   <div className="row">
     <div className="col-md-12">
-    <p className="sub-heading" style={{textAlign:'center'}}>Visit Me<span className="span"> Daily</span>.</p>
-              <h2 style={{textAlign:'center'}}>My different Blog post ! </h2>
+    {/* <p className="sub-heading" style={{textAlign:'center'}}>Visit Me<span className="span"> Daily</span>.</p>
+              <h2 style={{textAlign:'center'}}>My different Blog post ! </h2> */}
     </div>
   </div>
   </div>
@@ -58,7 +61,11 @@ export default function Home() {
               
             />
           ))}
-      </div> */}
+      </div>
     </>
   );
 }
+
+
+
+

@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
 import Team from "./pages/Team";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -24,6 +25,7 @@ function App() {
           <Route path="about" element={<Team />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
+          <Route path="blogs" element={<Blogs />} />
           <Route path="signup" element={<Signup />} />
           <Route path="blogSingle/:id" element={<BlogSingle />} />
           <Route path="*" element={<Notfound />} />

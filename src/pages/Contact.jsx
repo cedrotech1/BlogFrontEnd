@@ -25,15 +25,15 @@ export default function Contact() {
             </div>
             <div>
               <p>
-                Website: <span className="bold">https://vist-me-daily.vercel.app/</span>
+                Website: <span className="bold"><a href="https://maureen-two.vercel.app/" target="_blank" rel="noopener noreferrer">maureen web</a></span>
               </p>
             </div>
           </div>
         </div>
         <div className="contact-form">
           <div className="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23206.987082573647!2d29.724768089884925!3d-2.6143594391732927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c30c875461a279%3A0x5e3baaf0d5aded1b!2sUniversity%20of%20Rwanda!5e0!3m2!1sen!2sus!4v1699383302211!5m2!1sen!2sus"
+          <iframe
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kacyiru RBA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%"
               height="90%"
               style={{ border: 0 }}

@@ -98,6 +98,15 @@ export default function Footer() {
                       Contact
                     </Link>
                   </li>
+                  <li className="tag">
+                    <Link to="/blogs">
+                      {" "}
+                      <span>
+                        <iconify-icon icon="grommet-icons:form-next"></iconify-icon>
+                      </span>{" "}
+                      Blogs
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

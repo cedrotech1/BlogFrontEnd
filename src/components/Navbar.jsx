@@ -33,6 +33,11 @@ class Navbar extends Component {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/blogs" className="tag">
+                  Blogs
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
