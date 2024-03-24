@@ -46,7 +46,7 @@ export default function Login() {
     try {
       const result = await axios.post(
         // "https://postgresql-2c0g.onrender.com/PostgreSQL/API/users/login",
-        `http://localhost:2400/PostgreSQL/API/users/login`,
+        `https://blogbeckend.onrender.com/PostgreSQL/API/users/login`,
         {
           email: email,
           password: password,

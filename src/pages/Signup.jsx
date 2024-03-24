@@ -40,7 +40,7 @@ export default function Signup() {
 
     try {
       const response = await fetch(
-        "http://localhost:2400/PostgreSQL/API/users/signUp",
+        "https://blogbeckend.onrender.com/PostgreSQL/API/users/signUp",
 
         {
           method: "POST",
