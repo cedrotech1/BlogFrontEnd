@@ -43,6 +43,7 @@ export default function Home() {
     </div>
   </div>
   </div>
+  <br />
       <div className="Articles-section container">
         {blogs &&
           blogs.map((post, index) => (
