@@ -2,10 +2,13 @@ import "../components/style/postpage.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PropagateLoader from "react-spinners/PropagateLoader";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 export default function Post() {
   const [openModalUpdate, setOpenModalUpdate] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [ispending, setIsPending] = useState(true);
   // ================== success message ============
   const success = () => {
     toast.success("Post has deleted", {
@@ -25,11 +28,11 @@ export default function Post() {
 
   const getData = async () => {
     const response = await axios.get(
-      // "https://postgresql-2c0g.onrender.com/PostgreSQL/API/posts/get/all"
           "https://blogbeckend.onrender.com/PostgreSQL/API/posts/get/all"
     );
     const data = response.data.data;
     setData(data);
+    setIsPending(false);
   };
   
   useEffect(() => {
@@ -95,6 +98,17 @@ export default function Post() {
                 </tr>
               </thead>
               <tbody>
+              {ispending && (
+        <div className="Loader container" style={{marginLeft:'3cm'}}>
+          <PropagateLoader
+            color="#ffd369"
+            cssOverride={{}}
+            loading
+            size={20}
+            speedMultiplier={1}
+          />
+        </div>
+      )}
                 {data.map((post, index) => {
                   return (
                     <tr key={index}>
