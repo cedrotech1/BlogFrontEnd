@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <>
       <nav id="mynavbar"> 
-        <Link to="/dashboard" className="tag logo">
+        <Link to="/addvideo" className="tag logo">
           <h1>Visit Me<span className="span"> Daily</span>.</h1>
           </Link>
         <div>
@@ -31,6 +31,13 @@ const TopBar = () => {
           <div className="tag">Users</div>
         </div>
       </Link>
+      {/* <li>
+      <Link to="/addvideo">
+        <div className="tag">
+          <div className="tag">Video</div>
+        </div>
+      </Link>
+      </li> */}
       </li>
           </ul>
         </div>

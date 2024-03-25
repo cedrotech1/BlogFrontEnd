@@ -15,6 +15,7 @@ import Post from "./dashboard/pages/Post";
 import Pages from "./dashboard/pages/Pages";
 import Inbox from "./dashboard/pages/Inbox";
 import EditPost from "./dashboard/pages/EditPost";
+import Video from "./dashboard/pages/addvideopost";
 import { Users } from "./dashboard/pages/Users";
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="signup" element={<Signup />} />
+         
           <Route path="blogSingle/:id" element={<BlogSingle />} />
           <Route path="*" element={<Notfound />} />
         </Route>
@@ -34,6 +36,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/post" element={<Post />} />
           <Route path="/pages" element={<Pages />} />
+          <Route path="addvideo" element={<Video />} />
           <Route path="/inbox" element={<Inbox />} />
           <Route path="editpost/:id" element={<EditPost />} />
           <Route path="users" element={<Users />} />

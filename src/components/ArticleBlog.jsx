@@ -144,23 +144,49 @@ const handleLike = async (postId) => {
     }
   }
 };
+const isImage = (url) => {
+  return /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(url);
+};
+const isVideo = (url) => {
+  return /\.(mp4|webm|ogg)$/i.test(url);
+};
+
   return (
     <>
       <div className="post">
-        <div className="post-img">
-          <img src={image} alt="" />
-        </div>
-        <div className="topper">
-          <div className="topper-content">
-            <div className="one">
-              <span className="day">{formatDay(data)}</span>
-            </div>
-            <div className="two">
-              <p class="yr">{formatYear(data)}</p>
-              <p class="mos">{formatMonth(data)}</p>
-            </div>
-          </div>
-        </div>
+       
+        {isImage(image) ? (
+           <div className="post-img">
+    <img src={image} alt="" />
+    </div>
+  ) : (
+    <video className="video-container" style={{ width: '100%', maxWidth: '100%', height: 'auto' }} controls>
+    <source src={image} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  
+  )}
+       
+       {isImage(image) ? (
+         <div className="topper">
+         <div className="topper-content">
+           <div className="one">
+             <span className="day">{formatDay(data)}</span>
+           </div>
+           <div className="two">
+             <p class="yr">{formatYear(data)}</p>
+             <p class="mos">{formatMonth(data)}</p>
+           </div>
+         </div>
+       </div>
+  ) : (
+  <></>
+  
+  )}
+       
+
+
+
         <div className="post-body">
           <Link to={`/BlogSingle/${Id}`}>
             {" "}

@@ -135,14 +135,30 @@ const BlogSingle = () => {
     };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
-
+  const isImage = (url) => {
+    return /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(url);
+  };
+  console.log(blogData.postImage)
   return (
     <>
       <HeroPage title={"Blog Single"} />
       <div className="blogSingle-section container">
         <div className="col-1">
           <div className="blogSingle-ft-img">
-            <img src={blogData.postImage} alt="Feature Photos" />
+            {/* <img src={blogData.postImage} alt="Feature Photos" /> */}
+            {isImage(blogData.postImage) ? (
+          <div className="blogSingle-ft-img">
+              <img src={blogData.postImage} alt="" />
+            </div>
+        
+        ) : (
+          <div className="video-container">
+            <video style={{ width: '100%', maxWidth: '100%', height: 'auto' }} controls>
+              <source src={blogData.postImage} />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        )}
           </div>
           <div className="blogSingle-content">
             <h2>{blogData.postTitle}</h2>
@@ -283,7 +299,14 @@ const BlogSingle = () => {
                 relatedblogs.slice(0, 3).map((post, index) => (
                   <div class="block" key={index}>
                     <a class="blog-img">
-                      <img src={post.postImage} alt="Image" />
+                      {/* <img src={post.postImage} alt="Image" /> */}
+                      {isImage(post.postImage) ? (
+    <img src={post.postImage} alt="" />
+  ) : (
+    
+      <img src='https://res.cloudinary.com/da12yf0am/image/upload/v1711399753/fkxzmw7ipullmh8c8loz.png' alt="" />
+  
+  )}
                     </a>
                     <div class="text">
                       <h4 class="heading">

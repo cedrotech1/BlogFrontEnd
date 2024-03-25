@@ -13,10 +13,12 @@ const navigate = useNavigate();
               setOpenModal(true);
             }}
           >
+            
             New post
             <span className="plus-icon tag">
               <iconify-icon icon="icons8:plus"></iconify-icon>
             </span>
+            
           </div>
           {openModal && <CreatePost closeModal={setOpenModal} />}
       <div

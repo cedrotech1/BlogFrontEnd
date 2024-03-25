@@ -190,6 +190,7 @@
   }
   #mobile {
     display: block;
+    /* height: 100vh; */
   }
   #mobile i {
     font-size: 30px;

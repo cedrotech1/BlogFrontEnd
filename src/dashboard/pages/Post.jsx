@@ -68,7 +68,12 @@ export default function Post() {
     };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
-
+  const isImage = (url) => {
+    return /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(url);
+  };
+  const isVideo = (url) => {
+    return /\.(mp4|webm|ogg)$/i.test(url);
+  };
   return (
     <>
       <div className="post-section container-section">
@@ -114,7 +119,14 @@ export default function Post() {
                     <tr key={index}>
                       <td>{index + 1}</td>
                       <td className="t-image">
-                        <img src={post.postImage} alt="Photo" />
+                        {/* <img src={post.postImage} alt="Photo" /> */}
+                        {isImage(post.postImage) ? (
+    <img src={post.postImage} alt="" />
+  ) : (
+    
+      <img src='https://res.cloudinary.com/da12yf0am/image/upload/v1711399753/fkxzmw7ipullmh8c8loz.png' alt="" />
+  
+  )}
                       </td>
                       <td className="t-title">
                         <h4>{post.postTitle}</h4>
